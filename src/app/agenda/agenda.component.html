@@ -1,0 +1,16 @@
+
+<div>
+    <h1>Agenda de Contactos</h1>
+    <button class="btn btn-success" (click)="agregarContacto()">Agregar Contacto</button>
+  
+    <div *ngFor="let contacto of contactos">
+      <div>
+        <span>ID: {{ contacto.id }}</span>
+        <span>Nombre: {{ contacto.nombre }}</span>
+        <span>Teléfono: {{ contacto.telefono }}</span>
+        <button class="btn btn-primary" (click)="editarContacto(contacto)">Editar</button>
+      </div>
+    </div>
+  
+    <button class="btn btn-danger" (click)="eliminarContactos()">Eliminar Todos los Contactos</button>
+  </div>
